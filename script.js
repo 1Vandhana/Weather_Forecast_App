@@ -1,6 +1,6 @@
 //---Script.js----//
-//---Created My Own API KEY --
-const API_KEY = "7f630944edec4ad71a45ad3ab9be7c45";
+//---Created My Own API KEY ---
+const API_KEY = "KEEP_YOUR_OWN_API_KEY";//---USE YOUR OWN API KEY BY CREATING AN ACCOUNT IN OFFICIAL WEATHER APPS--
 //-----BASE Weather and Forecast URLs for WFA--
 const BASE_WEATHER = "https://api.openweathermap.org/data/2.5/weather";
 const BASE_FORECAST = "https://api.openweathermap.org/data/2.5/forecast";
@@ -18,15 +18,11 @@ const weatherIconEl = document.getElementById("weatherIcon");
 const forecastContainer = document.getElementById("forecastContainer");
 const errorMessage = document.getElementById("errorMessage");
 const alertBox = document.getElementById("alertBox");
-
 // Temperature Unit
 let todaysUnit = "C";
-
 // LocalStorage Key
 const RECENT_KEY = "wf_recent_cities";
-
 ///////------Utility Functions------/
-
 function kelvinToC(k) {
   return k - 273.15;
 }
@@ -34,13 +30,11 @@ function kelvinToC(k) {
 function kelvinToF(k) {
   return (k - 273.15) * 9 / 5 + 32;
 }
-
 function formatTemp(k, unit = "C") {
   return unit === "C"
     ? Math.round(kelvinToC(k)) + "°C"
     : Math.round(kelvinToF(k)) + "°F";
 }
-
 function showError(msg) {
   errorMessage.textContent = msg;
   errorMessage.classList.remove("hidden");
