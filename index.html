@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Forecast App</title>
+  <!-- Iam using direct Tailwind CDN to avoid some modules-->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- It is for styling my app using style tag-->
+  <style>
+    body {
+      background-color: rgba(234, 203, 177, 0.181);
+      background-size: cover;        
+      background-position: center;   
+      background-repeat: no-repeat;  
+      height: 100%;            
+      transition: background-color 0.6s ease;
+    }
+    .card-scroll {
+      max-height: 380px;
+      overflow-y: auto;
+    }
+  </style>
+</head>
+<body class="min-h-screen text-gray-800">
+  <main class="max-w-6xl mx-auto p-6">
+<!-- Header using for Introducing the App  How it going to work-->
+    <header class="text-center mb-8">
+      <h1 class="text-4xl font-extrabold">Weather Forecast App</h1>
+      <p class="text-sm text-gray-600 mt-2">
+        📅 Shows daily forecast tracking, matching “Day by Day"🌦️
+      </p>
+    </header>
+
+    <!-- It ia a Search Section  where you can search the citys and there weather changes-->
+    <section class="max-w-3xl mx-auto mt-6 mb-12">
+
+      <label class="block text-lg font-medium mb-3">Search City</label>
+
+      <div class="flex gap-3 mb-4">
+        <input id="cityInput"
+          type="text"
+          placeholder="Enter city name"
+          class="flex-1 px-4 py-2 border rounded-lg shadow-sm" />
+
+        <button id="searchBtn"
+          class="px-5 py-2 bg-blue-600 text-white rounded-lg shadow">
+          Search
+        </button>
+        <button id="locBtn"
+          class="px-4 py-2 border rounded-lg shadow">
+          Use My Location
+        </button>
+      </div>
+      <!-- This is for Recent Searches  to retrive what we areb searched in the website-->
+      <div class="flex items-center gap-3 mb-4">
+        <span class="text-sm font-medium">Recent:</span>
+
+        <select id="recentSelect" class="px-3 py-2 border rounded-lg">
+          <option>No recent Searches</option>
+        </select>
+
+        <button id="clearRecent" class="text-sm text-red-600">
+          Clear
+        </button>
+      </div>
+
+      <!-- Unit Toggle  used for  changing of  F/C -->
+      <div class="flex items-center gap-3">
+        <span class="text-sm font-medium">Today's Unit</span>
+
+        <button id="unitToggle"
+          class="px-3 py-1 border rounded-lg">
+          °C
+        </button>
+      </div>
+      <!-- Error Box for Error Messages-->
+      <div id="errorMessage" class="mt-4 hidden p-3 rounded-md bg-red-50 text-red-700"></div>
+      <!-- Alert Box  for Weather alerts through the app-->
+      <div id="alertBox" class="hidden mt-4 p-3 rounded-md text-sm"></div>
+    </section>
+    <!-- This the display section of WF App -->
+    <section class="max-w-6xl mx-auto grid gap-6 md:grid-cols-3">
+      <!-- Card for Current Weather for App it shows the Humidity and Wind of that paricular cities -->
+      <div class="bg-white rounded-xl shadow p-6">
+        <h2 id="cityName" class="text-xl font-bold mb-3">-</h2>
+        <p id="currentTemp" class="text-4xl font-extrabold">--°</p>
+        <div class="mt-4" id="weatherIcon"></div>
+        <p id="currentDetails"
+          class="text-sm text-gray-600 mt-3">
+          Humidity: -- | Wind: --
+        </p>
+      </div>
+
+      <!-- Forecast Card for 5- day forecast -->
+      <div class="bg-white rounded-xl shadow p-6 md:col-span-2">
+        <h3 class="font-semibold text-lg mb-4">5-day forecast</h3>
+
+        <div id="forecastContainer"
+          class="grid grid-cols-2 md:grid-cols-5 gap-4 card-scroll">
+          <!----JS will insert forecast cards -->
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Footer to intro of Website -->
+    <footer class="mt-10 text-center text-xs text-gray-500">
+      @Vandhana's Website
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
