@@ -44,7 +44,7 @@ showing: 1.Date and time
 
 //--Screenshots--//
 
-Example:Weather_Forecast_App for New York City
+Example:Weather_Forecast_App for :New York City
 
 
 
