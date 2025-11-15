@@ -44,35 +44,7 @@ showing: 1.Date and time
 Screenshots:
 
 Example:Weather_Forecast_App for :New York City
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<img width="1440" height="900" alt="NYC" src="https://github.com/user-attachments/assets/bbd8d555-c017-4c0a-8f5d-688d0eca0d7c" />
 
 
 
