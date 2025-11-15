@@ -9,11 +9,7 @@
   <!-- It is for styling my app using style tag-->
   <style>
     body {
-      background-color: rgba(234, 203, 177, 0.181);
-      background-size: cover;        
-      background-position: center;   
-      background-repeat: no-repeat;  
-      height: 100%;            
+      background-color: rgba(14, 8, 3, 0.181);           
       transition: background-color 0.6s ease;
     }
     .card-scroll {
@@ -39,7 +35,7 @@
           type="text"
           placeholder="Enter city name"
           class="flex-1 px-4 py-2 border rounded-lg shadow-sm" />
-      <!--buttons are used for searching the cities and click actions-->
+      <!--buttons are used for searching the cities and click actions for WFA-->
         <button id="searchBtn"
           class="px-5 py-2 bg-blue-600 text-white rounded-lg shadow">
           Search
@@ -90,12 +86,12 @@
       </div>
 
       <!-- Forecast Card for 5- day forecast -->
-      <div class="bg-white rounded-xl shadow p-6 md:col-span-2">
-        <h3 class="font-semibold text-lg mb-4">5-day forecast</h3>
+      <div class="bg-white rounded-xl shadow p-10 md:col-span-2">
+        <h3 class="font-semibold text-lg mb-4 text-sky-600">5-day forecast</h3>
 
         <div id="forecastContainer"
           class="grid grid-cols-2 md:grid-cols-5 gap-4 card-scroll">
-          <!----JS will insert forecast cards -->
+
         </div>
       </div>
 
