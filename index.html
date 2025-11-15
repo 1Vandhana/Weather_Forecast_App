@@ -1,3 +1,4 @@
+<!--HTML BASIC STRUCTURE AND IMPLEMENTING APP WITH TAILWIND CSS -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,10 +23,9 @@
   <main class="max-w-6xl mx-auto p-6">
 <!-- Header using for Introducing the App  How it going to work-->
     <header class="text-center mb-8">
-      <h1 class="text-4xl font-extrabold">Weather Forecast App</h1>
-      <p class="text-sm text-gray-600 mt-2">
-        📅 Shows daily forecast tracking, matching “Day by Day"🌦️
-      </p>
+      <h1 class="font-extrabold text-6xl tracking-tight">Weather Forecast App</h1>
+      <p class="text-2xl to-indigo-600 font-bold text-gray-500 drop-shadow-[0_0_10px_rgba(0,120,255,0.7)]">Know the Weather. Own the Day.</p>
+
     </header>
     <!-- It ia a Search Section  where you can search the citys and there weather changes-->
     <section class="max-w-3xl mx-auto mt-6 mb-12">
@@ -41,7 +41,7 @@
           Search
         </button>
         <button id="locBtn"
-          class="px-4 py-2 border rounded-lg shadow">
+          class="px-4 py-2 border bg-green-600 rounded-lg shadow">
           Use My Location
         </button>
       </div>
@@ -60,7 +60,7 @@
 
       <!-- Unit Toggle  used for  changing of  F/C -->
       <div class="flex items-center gap-3">
-        <span class="text-sm font-medium">Today's Unit</span>
+        <span class="text-sm font-medium">Today's Unit:</span>
 
         <button id="unitToggle"
           class="px-3 py-1 border rounded-lg">
