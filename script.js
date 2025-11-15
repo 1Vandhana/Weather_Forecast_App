@@ -1,7 +1,7 @@
 //---Script.js----//
 //---Created My Own API KEY ---
-
 const API_KEY = "KEEP_YOUR_OWN_API_KEY";//---USE YOUR OWN API KEY BY CREATING AN ACCOUNT IN OFFICIAL WEATHER APPS--
+
 //--Example AP_KEY CAN BR--"7f63#################7c45"--
 
 //-----BASE Weather and Forecast URLs for WFA--
