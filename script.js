@@ -181,13 +181,11 @@ function renderForecast(days) {
   });
 }
 
-// used for fetching The Weather Data using ASYC Function with try and catch functions
-
+//--used for fetching The Weather Data using ASYNC Function with try and catch functions--
 async function fetchByCity(city) {
   if (!city) return showError("Enter a city name");
-
-  hideAlert();
-
+  hideAlert()
+  // used for exception haldling--
   try {
     const weather = await safeFetch(`${BASE_WEATHER}?q=${city}&appid=${API_KEY}`);
     const forecast = await safeFetch(`${BASE_FORECAST}?q=${city}&appid=${API_KEY}`);
